@@ -1,23 +1,19 @@
 // src/pages/LoadingPage.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoadingPage.css";
 
 function LoadingPage() {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(true); // Track if loading is still ongoing
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data loading state (map + places API)
     const loadData = async () => {
       try {
-        // Here, add your logic to load map data and places API
-        // Example: await fetchPlacesData();
-
-        // Simulate loading completion with a delay (simulate network delay)
+        // Simulate loading logic
         setTimeout(() => {
-          setLoading(false); // Set loading to false when data is loaded
-        }, 3000); // Adjust time to match how long it takes to load data
-
+          setLoading(false);
+        }, 3000);
       } catch (error) {
         console.error("Error loading data:", error);
         setLoading(false);
@@ -29,23 +25,23 @@ function LoadingPage() {
 
   useEffect(() => {
     if (!loading) {
-      navigate("/discover"); // Redirect once loading is done
+      navigate("/discover");
     }
   }, [loading, navigate]);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      {loading ? (
-        <>
-          <h2>Please wait as the map loads...</h2>
-          <p>We are fetching nearby places for you.</p>
-        </>
-      ) : (
-        <>
-          <h2>All set! Redirecting...</h2>
-          <p>You've been redirected to your discovery page.</p>
-        </>
-      )}
+    <div className="loading-container">
+      <div className="loading-card">
+        <div className="spinner"></div>
+        <h2 className="loading-title">
+          {loading ? "Hang tight! 🗺️" : "All set! Redirecting..."}
+        </h2>
+        <p className="loading-subtext">
+          {loading
+            ? "We’re finding the best places near you..."
+            : "You've been redirected to the Discover page."}
+        </p>
+      </div>
     </div>
   );
 }
