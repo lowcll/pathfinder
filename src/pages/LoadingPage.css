@@ -1,0 +1,14 @@
+/* Inside your CSS file (e.g., LoadingPage.css) */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  .loading-text {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  

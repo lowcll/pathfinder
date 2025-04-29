@@ -1,0 +1,127 @@
+/* Container Layout */
+.discover-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #cce8ff; /* light blue background */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 370px;
+  background: #ffffff;
+  padding: 20px;
+  overflow-y: scroll;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Category Filter */
+.filter-section {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.selected-category-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: black;
+}
+
+/* Dropdown */
+.category-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+.place-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    border-top: 8px solid #f0f0f0;
+    color: black; /* ← Fixes white text */
+  }
+  
+  .place-name,
+  .place-rating,
+  .place-address {
+    color: black; /* Ensure all text elements are visible */
+  }
+  
+
+.place-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.place-name {
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.place-rating {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.place-address {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.map-wrapper {
+    flex: 1;
+    height: 100vh;
+  }
+  
+/* Make button black by default */
+.save-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #333;
+}
+
+/* Optional: Animate or style the filled state */
+.save-button.favorited {
+  background-color: black;
+  color: white;
+}
+
+  
+
+  .place-description {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #333;
+  }
+
+  .place-card.highlighted {
+    border: 2px solid #007bff;
+    background-color: #e7f1ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  
+  

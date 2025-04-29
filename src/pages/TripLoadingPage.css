@@ -1,0 +1,47 @@
+.trip-loading-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  color: #01579b;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  padding: 1rem;
+}
+
+.trip-loading-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #01579b;
+}
+
+.trip-loading-page p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+  max-width: 500px;
+}
+
+.trip-spinner {
+  border: 6px solid #e3f2fd;
+  border-top: 6px solid #0277bd;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1.2s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(2, 119, 189, 0.4);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.trip-spinner:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
