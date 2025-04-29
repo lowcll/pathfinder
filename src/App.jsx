@@ -20,7 +20,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 
 
-const GOOGLE_API_KEY = "AIzaSyCQAuHUG7YwVN9RWq4yq2YgIaVWI686fxM";
+const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 function App() {
   const mapsLoaded = useLoadGoogleMaps(GOOGLE_API_KEY, ["places"]);
